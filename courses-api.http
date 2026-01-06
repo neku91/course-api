@@ -1,0 +1,37 @@
+### GET  insctructor
+GET http://127.0.0.1:8000/api/courses/instructors
+Accept: application/json
+
+### GET  courses
+GET http://127.0.0.1:8000/api/courses
+Accept: application/json
+
+###Create courses
+POST http://127.0.0.1:8000/api/courses
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Nuevo Curso 2",
+    "instructor_id" : 1
+}
+
+###Update courses
+PUT http://127.0.0.1:8000/api/courses/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Nuevo Curso 21",
+    "instructor_id" : 1
+}
+
+### Show 1 course
+GET http://127.0.0.1:8000/api/courses/1
+Content-Type: application/json
+Accept: application/json
+
+### delete 1 record
+DELETE http://127.0.0.1:8000/api/courses/4
+Content-Type: application/json
+Accept: application/json

@@ -1,0 +1,340 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/courses/instructors
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},{"id":2,"name":"Maci Schuppe","email":"nikita32@example.com"},{"id":3,"name":"Mr. Al Ratke DVM","email":"roel77@example.com"}],"links":{"first":null,"last":null,"prev":null,"next":null},"meta":{"path":"http:\/\/localhost\/api\/courses\/instructors","per_page":100,"next_cursor":null,"prev_cursor":null},"status":true,"message":"success"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/courses
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"id":1,"title":"Nuevo Curso 21","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[{"id":1,"title":"Similique debitis saepe perspiciatis quis neque debitis laudantium.","description":"Officia vero corporis quam culpa. Aliquid tempore debitis ex est voluptas. Ea repellendus quam voluptates suscipit nisi fuga sunt eos."},{"id":2,"title":"Alias et quis voluptatem quo.","description":"Id cumque vitae necessitatibus nobis qui dicta. Doloremque sit voluptate tempore tenetur amet quia optio nihil. Necessitatibus et et accusantium nihil aut optio odio."},{"id":3,"title":"Sequi odio quasi quaerat.","description":"Hic explicabo maxime voluptas accusamus molestiae et dolores. Accusantium reiciendis distinctio maxime at nesciunt ab. Delectus ipsa et reprehenderit quo qui nulla et."},{"id":4,"title":"Dolores ut totam iste facere facere recusandae eius.","description":"Debitis explicabo ducimus commodi veritatis debitis est. Sapiente sed dolore laboriosam. Voluptas vel fugiat totam ducimus maxime iste porro quae."},{"id":5,"title":"Et tempora eum facilis velit quibusdam quibusdam eos.","description":"Dolores quibusdam optio pariatur sunt aut ut ullam. Possimus in explicabo similique. Aliquid voluptatum magni fugiat ut."}]},{"id":2,"title":"In quis doloribus eum.","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[{"id":6,"title":"Excepturi voluptatem corrupti sed delectus suscipit consequatur.","description":"Ipsam in voluptatem error iure et est. Rerum hic aut qui non. Molestiae id qui aut autem aperiam. Ut nihil consequuntur reiciendis."},{"id":7,"title":"Aut in quas laborum sapiente et magni.","description":"Voluptatum voluptatem eum in distinctio quod occaecati. Dolorem voluptates beatae vitae impedit. Alias minus inventore incidunt aliquam. Autem nihil earum deserunt distinctio."},{"id":8,"title":"Ad fugit ut est distinctio.","description":"Vitae maxime est reprehenderit dolorem est numquam aliquam. Ullam odio et aut eaque totam cumque."},{"id":9,"title":"Quisquam nesciunt ex vitae est id perspiciatis.","description":"Cupiditate dolor inventore sit. Dicta sit et est qui voluptatem quod fuga. Aspernatur in non mollitia autem quos et ullam dolores. Qui incidunt omnis suscipit debitis blanditiis."},{"id":10,"title":"Corrupti sed porro earum vel tempora at.","description":"Illum excepturi voluptatibus eius nobis sed est. Rerum doloremque non distinctio tempora. Nemo tempora accusantium pariatur odio voluptates."}]},{"id":3,"title":"Illum at nulla est est est reiciendis.","instructor":{"id":2,"name":"Maci Schuppe","email":"nikita32@example.com"},"lessons":[{"id":11,"title":"Reiciendis molestias exercitationem nulla quia eligendi et.","description":"Id quo illo sit labore est. Beatae molestiae optio corrupti molestiae quidem aut. Dicta nostrum nulla maiores et quasi qui sint incidunt."},{"id":12,"title":"Error harum sapiente ut perferendis aut id.","description":"Architecto optio mollitia distinctio. Ipsam aliquam cumque hic totam et repellat."},{"id":13,"title":"Est voluptas debitis maxime sed dicta tempore.","description":"Iste laudantium optio pariatur sequi quae itaque quaerat excepturi. Dolorem tenetur est est sint. Et praesentium consequatur dolor. Eos non a laborum quasi ut dignissimos."},{"id":14,"title":"Sed ex eum officiis.","description":"Aut dolor repudiandae cum quaerat sit reprehenderit. Rerum illo ut libero ad. Et ea quasi dolor in excepturi esse."},{"id":15,"title":"Cupiditate sed commodi ea enim.","description":"Porro cumque excepturi omnis recusandae commodi. Aut fugit voluptate deserunt aliquam reprehenderit nihil sunt commodi. Aut et pariatur nisi eligendi praesentium."}]},{"id":4,"title":"Itaque hic dignissimos consequuntur at.","instructor":{"id":2,"name":"Maci Schuppe","email":"nikita32@example.com"},"lessons":[{"id":16,"title":"Quo voluptas architecto est est.","description":"Perspiciatis reiciendis delectus optio ipsa. Maiores voluptas ut explicabo nisi nihil. Voluptatem tempore ut eos."},{"id":17,"title":"Culpa porro animi ratione nihil.","description":"Ea voluptate sint dolores possimus omnis saepe esse. Minima dolorum deserunt maiores voluptatem. Corporis aut sit error exercitationem quo non."},{"id":18,"title":"Rerum necessitatibus inventore perferendis error sed.","description":"Illo dolore velit voluptatum error minima. Neque voluptas iusto magnam soluta voluptates animi et. Ullam dicta unde nobis corporis explicabo nostrum."},{"id":19,"title":"Vitae aut iure dicta.","description":"Et est similique magnam similique. Accusamus laboriosam amet asperiores ipsam repellendus molestiae autem. Sed tempora perferendis consequuntur omnis commodi. Temporibus consectetur id quo possimus quae eos."},{"id":20,"title":"Possimus quos eius esse in debitis impedit.","description":"Quasi facere minima ullam excepturi exercitationem reprehenderit natus. Consequatur ut qui aut sed fuga repellendus sed. Excepturi totam aliquid corrupti quisquam non accusantium. Sit mollitia et sed harum."}]},{"id":5,"title":"Et autem doloribus omnis ipsum.","instructor":{"id":3,"name":"Mr. Al Ratke DVM","email":"roel77@example.com"},"lessons":[{"id":21,"title":"Amet dolores quod provident explicabo quasi asperiores magnam vel.","description":"Doloremque voluptatum at quam laudantium. Harum sit aut labore molestias unde officiis ut. Et velit nihil iusto in. Reprehenderit odio qui veritatis dolore velit aliquid."},{"id":22,"title":"Facere sit inventore voluptatem doloribus eos.","description":"Iure enim voluptas iusto similique. Ducimus velit veniam est dolores labore dolor aperiam. Doloremque cum porro repudiandae odio ex. Qui ullam neque nostrum velit voluptatem consequuntur quam impedit."},{"id":23,"title":"Molestias hic laboriosam consectetur distinctio a ut.","description":"Dicta porro iusto voluptates molestiae praesentium sequi. Consequatur laudantium nobis veniam qui iste illum."},{"id":24,"title":"Maiores temporibus nulla omnis dolore.","description":"Earum id aut vitae tempore et sed eum. Optio mollitia dolore quasi et. Est voluptatem saepe cumque enim consequatur. Voluptate ut ut iure quia."},{"id":25,"title":"Nihil alias occaecati ab nihil aut aperiam.","description":"Velit non provident ut consequatur. Cupiditate labore rerum fuga est voluptatibus a quod architecto. Consequuntur alias deleniti consequatur non maiores ratione non."}]},{"id":6,"title":"A facilis aut eius nisi.","instructor":{"id":3,"name":"Mr. Al Ratke DVM","email":"roel77@example.com"},"lessons":[{"id":26,"title":"Illum laudantium eveniet modi quasi.","description":"Non voluptatem aliquam explicabo dicta est quia ullam. Eaque consequatur dolor quasi est consequatur reprehenderit. Autem sed quo laboriosam. Sed sint similique laborum sapiente ad. Fugiat quia neque consequatur non sit."},{"id":27,"title":"Repudiandae et ut quibusdam earum ut officia.","description":"Aut quaerat et adipisci et molestiae. Eius cupiditate reiciendis similique fugiat illum et quasi quas. Numquam saepe non sit."},{"id":28,"title":"Quia fugit dignissimos officia cum et dicta in.","description":"Ut error omnis aut tempora omnis et dolorum. Error enim veniam in nam aut tempora officia id. Eos ea necessitatibus ut blanditiis. Dolores voluptatum molestiae autem est neque perferendis."},{"id":29,"title":"Molestiae natus sed vero dolor ratione quasi.","description":"Doloremque eum quae labore asperiores est. Et adipisci ipsum et consequatur. Voluptatem tempora ratione natus ipsum quidem dolorem."},{"id":30,"title":"Veritatis soluta ipsum nemo ab.","description":"Dolor neque dicta voluptas iusto est sint provident. Impedit minus earum deserunt in voluptatem eveniet ullam. Excepturi perspiciatis voluptas optio odit sequi id. Eaque itaque voluptatem ipsum aliquid voluptas molestiae."}]},{"id":7,"title":"Nuevo Curso","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":8,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":9,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":10,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":11,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":13,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":14,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]},{"id":15,"title":"Nuevo Curso 2","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[]}],"links":{"first":null,"last":null,"prev":null,"next":null},"meta":{"path":"http:\/\/localhost\/api\/courses","per_page":100,"next_cursor":null,"prev_cursor":null},"status":true,"message":"success"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/courses
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        custom: []
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      instructor_id:
+        custom: []
+        name: instructor_id
+        description: ''
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      title: b
+      instructor_id: 16
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: 'api/courses/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the course.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        custom: []
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      instructor_id:
+        custom: []
+        name: instructor_id
+        description: 'The <code>id</code> of an existing record in the instructors table.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      title: b
+      instructor_id: 16
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/courses/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the course.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":{"id":1,"title":"Nuevo Curso 21","instructor":{"id":1,"name":"Eliezer Walter III","email":"okulas@example.com"},"lessons":[{"id":1,"title":"Similique debitis saepe perspiciatis quis neque debitis laudantium.","description":"Officia vero corporis quam culpa. Aliquid tempore debitis ex est voluptas. Ea repellendus quam voluptates suscipit nisi fuga sunt eos.","video":{"id":1,"url":"http:\/\/hamill.info\/dicta-maiores-suscipit-aspernatur-repudiandae-perferendis-eum","created_at":"03-01-2026 19:32:43"}},{"id":2,"title":"Alias et quis voluptatem quo.","description":"Id cumque vitae necessitatibus nobis qui dicta. Doloremque sit voluptate tempore tenetur amet quia optio nihil. Necessitatibus et et accusantium nihil aut optio odio.","video":{"id":2,"url":"http:\/\/cronin.biz\/mollitia-laboriosam-ipsum-cupiditate-similique-dolor.html","created_at":"03-01-2026 19:32:43"}},{"id":3,"title":"Sequi odio quasi quaerat.","description":"Hic explicabo maxime voluptas accusamus molestiae et dolores. Accusantium reiciendis distinctio maxime at nesciunt ab. Delectus ipsa et reprehenderit quo qui nulla et.","video":{"id":3,"url":"https:\/\/www.olson.com\/pariatur-modi-asperiores-consectetur-architecto-illum-at","created_at":"03-01-2026 19:32:43"}},{"id":4,"title":"Dolores ut totam iste facere facere recusandae eius.","description":"Debitis explicabo ducimus commodi veritatis debitis est. Sapiente sed dolore laboriosam. Voluptas vel fugiat totam ducimus maxime iste porro quae.","video":{"id":4,"url":"http:\/\/www.roberts.org\/","created_at":"03-01-2026 19:32:43"}},{"id":5,"title":"Et tempora eum facilis velit quibusdam quibusdam eos.","description":"Dolores quibusdam optio pariatur sunt aut ut ullam. Possimus in explicabo similique. Aliquid voluptatum magni fugiat ut.","video":{"id":5,"url":"https:\/\/www.fadel.com\/suscipit-tenetur-illo-qui-sed-aliquid-deserunt","created_at":"03-01-2026 19:32:43"}}],"users":[{"id":2,"name":"Prof. River Schinner V","email":"mkuhlman@example.org","course_user":{"favorite":1}},{"id":6,"name":"Benny Rolfson","email":"gaylord.cassidy@example.org","course_user":{"favorite":0}},{"id":7,"name":"Frederique Rogahn","email":"jaycee92@example.org","course_user":{"favorite":0}},{"id":10,"name":"Lorenz Kutch","email":"murray04@example.org","course_user":{"favorite":0}}],"comments":[{"id":1,"text":"Quo molestias ipsam amet numquam accusamus ut pariatur. Enim nulla id enim. Alias animi cumque ea voluptas. Quia earum eligendi laboriosam deleniti modi.","created_at":"03-01-2026 19:32:43","user":{"id":10,"name":"Lorenz Kutch","email":"murray04@example.org"}},{"id":2,"text":"Repellendus deserunt qui assumenda voluptas iste quibusdam dolores. Quis est in cupiditate hic rerum commodi. Adipisci commodi voluptatem deserunt aliquam.","created_at":"03-01-2026 19:32:43","user":{"id":2,"name":"Prof. River Schinner V","email":"mkuhlman@example.org"}}],"rates":[{"id":1,"rate":4963.9,"user":{"id":3,"name":"Keven Auer","email":"rdenesik@example.net"}},{"id":2,"rate":2351.8,"user":{"id":9,"name":"Dr. Collin Farrell","email":"qauer@example.org"}},{"id":3,"rate":18488840.316362,"user":{"id":9,"name":"Dr. Collin Farrell","email":"qauer@example.org"}}]},"status":true,"message":"success","average":6165385.338787333}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/courses/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the course.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
