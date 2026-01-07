@@ -28,11 +28,24 @@ El sistema de generación de datos crea estructuras completas de dependencias (I
 ---
 
 ## Instalación
-1. Instalar dependencias
+1. Clonar el repositorio
+    ```bash
+    git clone https://github.com/neku91/course-api.git
+   cd course-api
+    ```
+2. Instalar dependencias
     ```bash
     composer install
     ```
-1. Migraciones y Seeders:
+3. Configurar el archivo .env. Laravel necesita un archivo .env. Copiamos el de ejemplo que viene por defecto:
+    ```bash
+    cp .env.example .env
+    ```
+5. Generar la clave de la aplicación
+    ```bash
+   php artisan key:generate
+    ```
+2. Ejecutar Migraciones y Seeders:
     ```bash
     php artisan migrate --seed
     ```
