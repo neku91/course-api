@@ -44,6 +44,7 @@ El sistema de generación de datos crea estructuras completas de dependencias (I
 ```bash
   http://localhost/docs
 ```
+*  Se ha incluido un archivo .http para poder realizar llamadas a los endpoints de la API
 ---
 
 ## Calidad de Código y estilo
