@@ -60,6 +60,21 @@ El sistema de generación de datos crea estructuras completas de dependencias (I
 ```
 *  Se ha incluido un archivo .http para poder realizar llamadas a los endpoints de la API
 ---
+## Testing
+
+El proyecto cuenta con una suite de pruebas automatizadas que cubren las funciones del controlador de cursos
+### Configuración del entorno de pruebas
+Para garantizar una revisión fluida, el proyecto está preconfigurado para utilizar **SQLite en memoria**. Esto significa que:
+* No es necesario configurar una base de datos adicional.
+* Los tests no afectarán a los datos  locales de desarrollo.
+* La ejecución es bastante rápida.
+
+### Cómo ejecutar los tests
+Una vez instalado el proyecto, simplemente ejecuta el siguiente comando:
+
+```bash
+php artisan test
+```
 
 ## Calidad de Código y estilo
 Para asegurar que el código no solo funcione, sino que sea excelente, se han usado dos herramientas clave en el flujo de trabajo:
@@ -76,7 +91,9 @@ composer run lint
 composer run stan
 ```
 
-Para ejecutar los comandos anteriores y realizar los test:
+Para ejecutar los comandos anteriores y realizar los test en el mismo comando:
 ```bash
 composer run check
 ```
+
+
