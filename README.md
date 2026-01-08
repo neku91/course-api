@@ -36,6 +36,7 @@ El sistema de generación de datos crea estructuras completas de dependencias (I
 2. Instalar dependencias
     ```bash
     composer install
+   npm install
     ```
 3. Configurar el archivo .env. Laravel necesita un archivo .env. Copiamos el de ejemplo que viene por defecto:
     ```bash
