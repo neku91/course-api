@@ -1,38 +1,36 @@
-*.log
-.DS_Store
-
+# --- Archivos de Entorno y Configuración (Privados) ---
 .env
 .env.backup
 .env.production
 .phpactor.json
-.phpunit.result.cache
-.phpunit.cache/
+Homestead.json
+Homestead.yaml
 
+# --- Archivos de Sistema y Editores ---
+.DS_Store
+Thumbs.db
 /.fleet
 /.idea
 /.nova
 /.vscode
 /.zed
-*.log
-.DS_Store
-Thumbs.db
+.phpunit.result.cache
+.phpunit.cache/
 
+# --- Dependencias ---
 /vendor
 /node_modules
+
+# --- Archivos Públicos Generados ---
 /public/storage
 /public/build
 /public/hot
+
+# --- Carpeta Storage  ---
+*.log
 /storage/*.key
 /storage/pail
+/storage/app/public/*
 /storage/framework/cache/data/*
 /storage/framework/sessions/*
 /storage/framework/views/*
-/storage/app/public/*
-
-Homestead.json
-Homestead.yaml
-Thumbs.db
-
-# Rutas de exclusión del proyecto
-/storage/app/
-/storage/framework/
