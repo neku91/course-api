@@ -22,24 +22,25 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
-        $users = User::factory()->count(20)->create();
+        $users = User::factory()->count(10)->create();
+        
 
         Instructor::factory()
             ->count(5)
             ->has(
                 Course::factory()
-                    ->count(10)
-                    ->hasAttached($users->random(4), fn () => ['favorite' => rand(0, 1)])
+                    ->count(5)
+                    ->hasAttached($users, fn () => ['favorite' => rand(0, 1)])->recycle($users)
                     ->has(
                         Lesson::factory()
-                            ->count(5)
+                            ->count(10)
                             ->has(Video::factory()->count(1))
                     )
-                    ->has(Comment::factory()->count(20)->recycle($users))
-                    ->has(Rate::factory()->count(20)->recycle($users))
+                    ->has(Comment::factory()->count(5)->forCourse()->recycle($users))
+                    ->has(Rate::factory()->count(5)->forCourse()->recycle($users))
             )
-            ->has(Comment::factory()->forInstructor()->recycle($users))
-            ->has(Rate::factory()->forInstructor()->recycle($users))
+            ->has(Comment::factory()->count(5)->forInstructor()->recycle($users))
+            ->has(Rate::factory()->count(5)->forInstructor()->recycle($users))
             ->create();
     }
 }
