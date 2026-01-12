@@ -36,8 +36,7 @@ class DatabaseSeeder extends Seeder
                             ->has(Video::factory()->count(1))
                     )
                     ->has(Comment::factory()->count(20)->recycle($users))
-                    ->has(
-                        Rate::factory()->count(20)->recycle($users))
+                    ->has(Rate::factory()->count(20)->recycle($users))
             )
             ->has(Comment::factory()->forInstructor()->recycle($users))
             ->has(Rate::factory()->forInstructor()->recycle($users))
