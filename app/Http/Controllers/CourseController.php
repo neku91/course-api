@@ -13,6 +13,7 @@ use App\Models\Instructor;
 use App\Services\CourseRatingService;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 
 class CourseController extends Controller
 {
@@ -56,7 +57,7 @@ class CourseController extends Controller
                 ->response()
                 ->setStatusCode(201);
         } catch (\Exception $e) {
-            \Log::error('Error in store function CourseController : '.$e->getMessage());
+            Log::error('Error in store function CourseController : '.$e->getMessage());
 
             return response()->json(['status' => false, 'message' => 'Server error'], 500);
         }
@@ -110,7 +111,7 @@ class CourseController extends Controller
         } catch (ModelNotFoundException $e) {
             return response()->json(['status' => false, 'message' => 'Course not found'], 404);
         } catch (\Exception $e) {
-            \Log::error('Error in update function CourseController : '.$e->getMessage());
+            Log::error('Error in update function CourseController : '.$e->getMessage());
 
             return response()->json(['status' => false, 'message' => 'Server error'], 500);
         }
