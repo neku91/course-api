@@ -83,7 +83,7 @@ class CourseController extends Controller
         } catch (ModelNotFoundException $e) {
             return response()->json(['status' => false, 'message' => 'Course not found'], 404);
         } catch (\Exception $e) {
-            \Log::error("Error in show function CourseController {$id}: ".$e->getMessage());
+            Log::error("Error in show function CourseController {$id}: ".$e->getMessage());
 
             return response()->json(['status' => false, 'message' => 'Server error'], 500);
         }
@@ -130,7 +130,7 @@ class CourseController extends Controller
         } catch (ModelNotFoundException $e) {
             return response()->json(['status' => false, 'message' => 'Course not found'], 404);
         } catch (\Exception $e) {
-            \Log::error("Error in destroy function CourseController {$id}: ".$e->getMessage());
+            Log::error("Error in destroy function CourseController {$id}: ".$e->getMessage());
 
             return response()->json(['status' => false, 'message' => 'Server error'], 500);
         }
