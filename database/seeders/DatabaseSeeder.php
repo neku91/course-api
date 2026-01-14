@@ -22,15 +22,15 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+        /*
         $users = User::factory()->count(10)->create();
-        
 
         Instructor::factory()
             ->count(5)
             ->has(
                 Course::factory()
                     ->count(5)
-                    ->hasAttached($users, fn () => ['favorite' => rand(0, 1)])->recycle($users)
+                    ->hasAttached($users, fn() => ['favorite' => rand(0, 1)])->recycle($users)
                     ->has(
                         Lesson::factory()
                             ->count(10)
@@ -42,5 +42,17 @@ class DatabaseSeeder extends Seeder
             ->has(Comment::factory()->count(5)->forInstructor()->recycle($users))
             ->has(Rate::factory()->count(5)->forInstructor()->recycle($users))
             ->create();
+        */
+
+
+        $this->call([
+            UserSeeder::class,
+            InstructorSeeder::class,
+            CourseSeeder::class,
+            LessonSeeder::class,
+            VideoSeeder::class,
+            CommentSeeder::class,
+            RateSeeder::class
+        ]);
     }
 }
