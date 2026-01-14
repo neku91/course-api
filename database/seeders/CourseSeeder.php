@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Course;
 use App\Models\Instructor;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CourseSeeder extends Seeder
@@ -28,7 +27,7 @@ class CourseSeeder extends Seeder
 
                 foreach ($randomUsers as $user) {
                     $course->users()->attach($user->id, [
-                        'favorite' => rand(0, 1)
+                        'favorite' => rand(0, 1),
                     ]);
                 }
             });

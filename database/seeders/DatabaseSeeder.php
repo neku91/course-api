@@ -44,7 +44,6 @@ class DatabaseSeeder extends Seeder
             ->create();
         */
 
-
         $this->call([
             UserSeeder::class,
             InstructorSeeder::class,
@@ -52,7 +51,7 @@ class DatabaseSeeder extends Seeder
             LessonSeeder::class,
             VideoSeeder::class,
             CommentSeeder::class,
-            RateSeeder::class
+            RateSeeder::class,
         ]);
     }
 }

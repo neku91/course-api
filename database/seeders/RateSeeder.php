@@ -6,7 +6,6 @@ use App\Models\Course;
 use App\Models\Instructor;
 use App\Models\Rate;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class RateSeeder extends Seeder
@@ -25,7 +24,7 @@ class RateSeeder extends Seeder
                 ->count(10)
                 ->recycle($users)
                 ->create([
-                    'rateable_id'   => $course->id,
+                    'rateable_id' => $course->id,
                     'rateable_type' => $course->getMorphClass(),
                 ]);
         }
@@ -35,7 +34,7 @@ class RateSeeder extends Seeder
                 ->count(10)
                 ->recycle($users)
                 ->create([
-                    'rateable_id'   => $instructor->id,
+                    'rateable_id' => $instructor->id,
                     'rateable_type' => $instructor->getMorphClass(),
                 ]);
         }

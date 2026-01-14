@@ -6,7 +6,6 @@ use App\Models\Comment;
 use App\Models\Course;
 use App\Models\Instructor;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CommentSeeder extends Seeder
@@ -25,7 +24,7 @@ class CommentSeeder extends Seeder
                 ->count(10)
                 ->recycle($users)
                 ->create([
-                    'commentable_id'   => $course->id,
+                    'commentable_id' => $course->id,
                     'commentable_type' => $course->getMorphClass(),
                 ]);
         }
@@ -35,7 +34,7 @@ class CommentSeeder extends Seeder
                 ->count(10)
                 ->recycle($users)
                 ->create([
-                    'commentable_id'   => $instructor->id,
+                    'commentable_id' => $instructor->id,
                     'commentable_type' => $instructor->getMorphClass(),
                 ]);
         }
