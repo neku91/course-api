@@ -16,9 +16,10 @@ class VideoSeeder extends Seeder
     {
         $lessons = Lesson::all();
 
-        Video::factory()
-            ->count(10)
-            ->recycle($lessons)
-            ->create();
+        foreach ($lessons as $lesson) {
+            Video::factory()
+                ->for($lesson)
+                ->create();
+        }
     }
 }

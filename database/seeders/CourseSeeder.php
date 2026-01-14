@@ -23,10 +23,14 @@ class CourseSeeder extends Seeder
             ->recycle($instructors)
             ->create()
             ->each(function ($course) use ($users) {
-                $course->users()->attach(
-                    $users->random(rand(1, 3)),
-                    ['favorite' => rand(0, 1)]
-                );
+
+                $randomUsers = $users->random(rand(1, 3));
+
+                foreach ($randomUsers as $user) {
+                    $course->users()->attach($user->id, [
+                        'favorite' => rand(0, 1)
+                    ]);
+                }
             });
     }
 }

@@ -20,7 +20,24 @@ class RateSeeder extends Seeder
         $courses = Course::all();
         $instructors = Instructor::all();
 
-        Rate::factory()->count(10)->forCourse()->recycle($users)->recycle($courses)->create();
-        Rate::factory()->count(10)->forInstructor()->recycle($users)->recycle($instructors)->create();
+        foreach ($courses as $course) {
+            Rate::factory()
+                ->count(10)
+                ->recycle($users)
+                ->create([
+                    'rateable_id'   => $course->id,
+                    'rateable_type' => $course->getMorphClass(),
+                ]);
+        }
+
+        foreach ($instructors as $instructor) {
+            Rate::factory()
+                ->count(10)
+                ->recycle($users)
+                ->create([
+                    'rateable_id'   => $instructor->id,
+                    'rateable_type' => $instructor->getMorphClass(),
+                ]);
+        }
     }
 }

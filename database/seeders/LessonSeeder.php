@@ -16,9 +16,11 @@ class LessonSeeder extends Seeder
     {
         $courses = Course::all();
 
-        Lesson::factory()
-            ->count(10)
-            ->recycle($courses)
-            ->create();
+        foreach ($courses as $course) {
+            Lesson::factory()
+                ->count(10)
+                ->for($course)
+                ->create();
+        }
     }
 }

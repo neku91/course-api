@@ -20,7 +20,24 @@ class CommentSeeder extends Seeder
         $courses = Course::all();
         $instructors = Instructor::all();
 
-        Comment::factory()->count(10)->forCourse()->recycle($users)->recycle($courses)->create();
-        Comment::factory()->count(10)->forInstructor()->recycle($users)->recycle($instructors)->create();
+        foreach ($courses as $course) {
+            Comment::factory()
+                ->count(10)
+                ->recycle($users)
+                ->create([
+                    'commentable_id'   => $course->id,
+                    'commentable_type' => $course->getMorphClass(),
+                ]);
+        }
+
+        foreach ($instructors as $instructor) {
+            Comment::factory()
+                ->count(10)
+                ->recycle($users)
+                ->create([
+                    'commentable_id'   => $instructor->id,
+                    'commentable_type' => $instructor->getMorphClass(),
+                ]);
+        }
     }
 }
